@@ -6,38 +6,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
-
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+    ></script>
+    <link rel ="stylesheet" href="Assets/style.css">
 </head>
 <body>
     <header>
-        <h1 id="heading">Weather Dashboard</h1>
+        <h1 id="heading" class="text-center">Weather Dashboard</h1>
     </header>
     <div class ="grid-x">
         <!-- The div that holds the search form -->
-        <div  class= "cell medium-3" >
+        <div  class= "cell medium-3 grid-container" >
             <div id="search">
                 <form>
                     <h3>
                         Search for a City:
                     </h3>
-                    <input id ="search-city" type=text placeholder="San Diego"> 
-                    <button id="search-btn" type ="submit">Search </button>
+                    <input id ="search-city" type=text placeholder="San Diego" value =""> 
+                    <button id="search-btn" class ="button float-right" type ="submit">Search </button>
                     
                 </form>
             </div>
             <hr>
-            <div id="recent_searches">
+            <div id="recent_searches"  >
                 <!-- Recent searches go here -->
             </div>
         </div>
         <!-- The div that holds the results -->
         <div class="cell medium-9">
             
-            <div id ="results">
-
+            <div id ="results" class="grid-container">
+                <div class="grid-x grid-margin-x">
+                    <div class="cell">
+                      <div class="card">
+                        <h4> <span id="cityname" > </span> <span id="date0" > </span> <img id="icon0"> </h4>
+                        <ul>
+                            <li>Temp: <span id="temp0"> </span >&degF</li>
+                            <li>Wind: <span id="wind0"> </span >MPH</li>
+                            <li>Humidity: <span id="humidity0"> </span >%</li>
+                            <li>UV Index: <span id="uvindex"> </span ></li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>  
             </div>
-            <div id="forecast">
-
+            
+            <div id="forecast" class="grid-container">
+                <h3> 5 day forecast:</h3>
+                <div class="grid-x grid-margin-x small-up-2 medium-up-5">
+                    <div class="cell">
+                      <div class="card">
+                        
+                        <div class="card-section">
+                        <h4><span id="date1"></span></h4>
+                        <img id="icon1" >
+                        <ul>
+                            <li>Temp:<span id="temp1"></span>&degF</li>
+                            <li>Wind: <span id="wind1"> </span >MPH</li>
+                            <li>Humidity: <span id="humidity1"> </span >%</li>
+                        </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell">
+                        <div class="card">
+                          
+                          <div class="card-section">
+                          <h4><span id="date2"></span></h4>
+                          <img id="icon2" >
+                          <ul>
+                              <li>Temp: <span id="temp2"></span>&degF</li>
+                              <li>Wind: <span id="wind2"> </span >MPH</li>
+                              <li>Humidity: <span id="humidity2"> </span >%</li>
+                          </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cell">
+                        <div class="card">
+                          
+                          <div class="card-section">
+                          <h4><span id="date3"></span></h4>
+                          <img id="icon3" >
+                          <ul>
+                              <li>Temp:<span id="temp3"></span>&degF</li>
+                              <li>Wind: <span id="wind3"> </span >MPH</li>
+                              <li>Humidity: <span id="humidity3"> </span >%</li>
+                          </ul>
+                          </div>
+                        </div>
+                      </div>
+                  
+                      <div class="cell">
+                        <div class="card">
+                          
+                          <div class="card-section">
+                          <h4><span id="date4"></span></h4>
+                          <img id="icon4" >
+                          <ul>
+                              <li>Temp:<span id="temp4"></span>&degF</li>
+                              <li>Wind: <span id="wind4"> </span >MPH</li>
+                              <li>Humidity: <span id="humidity4"> </span >%</li>
+                          </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cell">
+                        <div class="card">
+                          
+                          <div class="card-section">
+                          <h4><span id="date5"></span></h4>
+                          <img id="icon5" >
+                          <ul>
+                              <li>Temp:<span id="temp5"></span>&degF</li>
+                              <li>Wind: <span id="wind5"> </span >MPH</li>
+                              <li>Humidity: <span id="humidity5"> </span >%</li>
+                          </ul>
+                          </div>
+                        </div>
+                      </div>
+                  
+                </div>
             </div>
         </div>
         
